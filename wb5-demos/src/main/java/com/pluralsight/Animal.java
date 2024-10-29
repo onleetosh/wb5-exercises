@@ -12,7 +12,13 @@ public class Animal {
     private String coat;
     private String species;
 
+    public Animal(String name){
+        //trace entry - turn off after testing how it runs
+        System.out.println("TRACE -- from animal constructor");
+        this.name = name;
+        this.species = "Unknown";
 
+    }
     /**
      * Getters
      */

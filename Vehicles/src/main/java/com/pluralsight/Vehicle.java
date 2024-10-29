@@ -7,26 +7,32 @@ public class Vehicle {
     private int numberOfPassenger;
     private int cargoCapacity;
     private int fuelCapacity;
-    private int speedMax;
-    private int speedCurrent;
-    private String engine;
+    private int maxSpeed;
+    private int currentSpeed;
     private String type;
     private String terrain;
 
-    public Vehicle() {
-
-    }
-    public Vehicle(String color, int numberOfPassenger, int fuelCapacity, int cargoCapacity, int speedMax, int speedCurrent, String engine, String terrain, String type) {
+    /**
+     * Constructor for a vehicle object
+     */
+    public Vehicle(String color,
+                   int numberOfPassenger,
+                   int cargoCapacity,
+                   int fuelCapacity,
+                   int maxSpeed,
+                   int currentSpeed,
+                   String type,
+                   String terrain) {
         this.color = color;
         this.numberOfPassenger = numberOfPassenger;
-        this.fuelCapacity = fuelCapacity;
         this.cargoCapacity = cargoCapacity;
-        this.speedMax = speedMax;
-        this.speedCurrent = speedCurrent;
-        this.engine = engine;
-        this.terrain = terrain;
+        this.fuelCapacity = fuelCapacity;
+        this.maxSpeed = maxSpeed;
+        this.currentSpeed = currentSpeed;
         this.type = type;
+        this.terrain = terrain;
     }
+
 
     /**
      * Getters
@@ -48,15 +54,12 @@ public class Vehicle {
     }
 
     public int getSpeedMax() {
-        return speedMax;
+        return maxSpeed;
     }
 
-    public String getEngine() {
-        return engine;
-    }
 
     public int getSpeedCurrent() {
-        return speedCurrent;
+        return currentSpeed;
     }
 
     public String getTerrain() {
@@ -88,15 +91,12 @@ public class Vehicle {
     }
 
     public void setSpeedMax(int speed) {
-        this.speedMax = speed;
+        this.maxSpeed = speed;
     }
 
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
 
     public void setSpeedCurrent(int speedCurrent) {
-        this.speedCurrent = speedCurrent;
+        this.currentSpeed = speedCurrent;
     }
 
     public void setTerrain(String terrain) {

@@ -4,18 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Moped slowRide = new Moped();
-        slowRide.setColor("Red");
-        slowRide.setFuelCapacity(5);
+        //Moped slowRide = new Moped();
+       // slowRide.setColor("Red");
+        //slowRide.setFuelCapacity(5);
 
-        System.out.println(slowRide);
+       // System.out.println(slowRide);
 
 
-        Car honda = new Car();
-        honda.setColor("Blue");
-        honda.setFuelCapacity(10);
+     //   Car honda = new Car();
+      //  honda.setColor("Blue");
+      //  honda.setFuelCapacity(10);
 
-        System.out.println(honda);
+      //  System.out.println(honda);
 
     }
 }

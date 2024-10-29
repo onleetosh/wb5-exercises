@@ -2,14 +2,19 @@
  * Subclass - 2nd level extension of Animal parent class
  */
 
-package com.pluralsight;
+package com.pluralsight.animal;
+
+import com.pluralsight.Animal;
 
 //extend allow subclass to call methods from parent class
-public class Dog extends Animal{
+public class Dog extends Animal {
 
     private String breed;
-//default constructor with no value
-    public Dog() {
+
+    public Dog(String name) {
+        super(name);
+        System.out.println("TRACE -- from dog constructor");
+
         super.setSpecies("Dog");
     }
     public String getBreed() {

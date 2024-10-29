@@ -1,19 +1,19 @@
 package com.pluralsight;
 
+import com.pluralsight.animal.Cat;
+import com.pluralsight.animal.Dog;
+
 public class Main {
     public static void main(String[] args) {
 
 
-        Animal fish = new Animal();
-        fish.setName("Finn");
+        Animal fish = new Animal("Finn");
         fish.setSpecies("GoldFish");
 
-        Dog dog = new Dog();
-        dog.setName("Goku");
+        Dog dog = new Dog("Goku");
         dog.setSpecies("Dog");
 
-        Cat cat = new Cat();
-        cat.setName("Starboy");
+        Cat cat = new Cat("Starboy");
 
 
 
