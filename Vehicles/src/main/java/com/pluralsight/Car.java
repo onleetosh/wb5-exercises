@@ -39,4 +39,8 @@ public class Car extends Vehicle {
     public void setMirrors(int mirrors) {
         this.mirrors = mirrors;
     }
+    @Override
+    public String toString(){
+        return super.toString() + "| # of windows" + windows + "| # of mirrors" + mirrors;
+    }
 }

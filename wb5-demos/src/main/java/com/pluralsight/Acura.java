@@ -42,9 +42,9 @@ public class Acura {
 
         System.out.println("\nHow many months are in a year? ");
         float monthsInYear = s.nextFloat();
+
         float estimatedYearsLeft = (mileageLeft / annualMileage) / monthsInYear ;
         System.out.printf("\nThere are %.2f months in a year \n and the estimated yearly mileage is %.2f", monthsInYear, annualMileage);
-
         System.out.println("\n---------------------------------------------------------------");
         System.out.printf("\nEstimated Years Left : %.2f", estimatedYearsLeft);
 

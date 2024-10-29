@@ -109,6 +109,13 @@ public class Vehicle {
 
     @Override
     public String toString(){
-        return "the vehicle is " + this.color + " with " + this.fuelCapacity;
+        return "Color: " + color +
+                "| # of passengers: " + numberOfPassenger +
+                "| cargo capacity size: " + cargoCapacity +
+                "| fuel capacity size: " +  fuelCapacity +
+                "| max speed: " + maxSpeed +
+                "| currentSpeed: " + currentSpeed +
+                "| vehicle type: " + type +
+                "| Type of terrain: " + terrain;
     }
 }

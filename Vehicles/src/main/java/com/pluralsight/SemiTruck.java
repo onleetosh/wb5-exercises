@@ -58,4 +58,11 @@ public class SemiTruck extends Vehicle {
     public void setHasAttachment(boolean hasAttachment) {
         this.hasAttachment = hasAttachment;
     }
+    @Override
+    public String toString(){
+        return super.toString() +
+                "| # of wheels: " + wheels +
+                "| cargo hold: " + cargo +
+                "| attachment: " + hasAttachment;
+    }
 }
