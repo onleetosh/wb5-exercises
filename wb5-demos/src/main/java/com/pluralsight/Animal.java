@@ -77,6 +77,10 @@ public class Animal {
         this.weight = amountOfFood;
     }
 
+    public void sayHello(){
+        System.out.println("[silence]");
+    }
+
     @Override
     public String toString(){
         return this.name + " is my pet " + this.species;

@@ -13,42 +13,65 @@ public class BuyOrNot {
         String car = s.next();
 
         System.out.println("What is the current mileage of the " + car);
-        float currentMileage = s.nextFloat();
+        int currentMileage = s.nextInt();
 
         System.out.println("Estimated max mileage for a " + car);
-        float maxMileage = s.nextFloat();
+        int maxMileage = s.nextInt();
 
-        System.out.printf("\nWith a current mileage at %.2f and a max mileage of %.2f",
-                currentMileage, maxMileage);
+        System.out.println("\nWith a current mileage at" + currentMileage + "and a max mileage of " + maxMileage);
 
-        float mileageLeft = maxMileage - currentMileage;
+        int mileageLeft = maxMileage - currentMileage;
         System.out.println("\n\nThe " + car + " has " +mileageLeft+ " miles left \n current mileage : " + currentMileage);
+        System.out.println("Estimated mileage remaining per expiration : " + mileageLeft);
         System.out.println("---------------------------------------------------------------");
 
         System.out.println("\nEnter an estimates miles per day : ");
-        float milesPerDay = s.nextFloat();
+        int milesPerDay = s.nextInt();
 
-        float monthsWith31Days = (milesPerDay * 31) * 7;
-        System.out.printf("\nEstimated mileage for Jan, March, May, July, August, Oct, Dec : %.2f ", monthsWith31Days);
-        float monthsWith30Days = (milesPerDay * 30) * 4;
-        System.out.printf("\n Estimated mileage for April, June, Sept, Nov : %.2f ", monthsWith30Days);
-        float monthWith29Days = (milesPerDay * 29) ;
-        System.out.printf("\nEstimated mileage for Feb : %.2f ", monthWith29Days);
+        System.out.println("Work miles in a week?");
+        int workMilesPerWeek = s.nextInt();
+
+        int monthsWith31Days = (milesPerDay * 31) * 7;
+        System.out.println("\nEstimated mileage for Jan, March, May, July, August, Oct, Dec: " +  monthsWith31Days + " miles");
+        int monthsWith30Days = (milesPerDay * 30) * 4;
+        System.out.println("\n Estimated mileage for April, June, Sept, Nov: " + monthsWith30Days + " miles");
+        int monthWith29Days = (milesPerDay * 29) ;
+        System.out.println("\nEstimated mileage for Feb : "+ monthWith29Days + " miles");
         System.out.println("\n---------------------------------------------------------------");
 
-        float annualMileage = monthsWith30Days + monthsWith31Days + monthWith29Days;
+        int annualMileage = monthsWith30Days + monthsWith31Days + monthWith29Days;
 
-        System.out.printf("\nEstimated mileage in a single year : %.2f ", annualMileage);
+        System.out.print("\nEstimated mileage in a single year : "+ annualMileage + " miles");
 
         System.out.println("\nHow many months are in a year? ");
-        float monthsInYear = s.nextFloat();
-        float estimatedYearsLeft = (mileageLeft / annualMileage) / monthsInYear ;
-        System.out.printf("\nThere are %.2f months in a year \n and the estimated yearly mileage is %.2f", monthsInYear, annualMileage);
+        int monthsInYear = s.nextInt();
+        int estimatedYearsLeft = (mileageLeft / annualMileage) / monthsInYear ;
+        System.out.println("\nThere are " + monthsInYear + " months in a year \n and the estimated yearly mileage is "+ annualMileage);
 
         System.out.println("\n---------------------------------------------------------------");
-        System.out.printf("\nEstimated Years Left : %.2f", estimatedYearsLeft);
+        System.out.println("\n [whole number}Estimated possible years with the " +car+ ": " + estimatedYearsLeft);
 
-        System.out.print("\n---------------------------------------------------------------");
+        System.out.println("\n---------------------------------------------------------------");
+
+        float currentMileageFloat = currentMileage;
+        float maxMileageFloat = maxMileage;
+        float mileageLeftFloat = maxMileageFloat - currentMileageFloat;
+
+        float monthsWith31DaysFloat = monthsWith31Days;
+        float monthsWith30DaysFloat = monthsWith30Days;
+        float monthsWith29DaysFloat = monthWith29Days;
+
+        float annualMileageFloat = monthsWith30DaysFloat + monthsWith31DaysFloat + monthsWith29DaysFloat;
+
+        float monthsInYearFloat = monthsInYear;
+
+        float estimatedYearsLeftFloat = (mileageLeftFloat / annualMileageFloat) / monthsInYearFloat ;
+
+        System.out.println("\n---------------------------------------------------------------");
+        System.out.printf("\n [Float output]Estimated years remaining as : %.2f", estimatedYearsLeftFloat);
+        System.out.println("\n---------------------------------------------------------------");
+
+
 
         if (estimatedYearsLeft < 3 && estimatedYearsLeft >= 4 ){
             System.out.println("\nOk ... more than 4 years isn't bad.");

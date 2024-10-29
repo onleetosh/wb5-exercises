@@ -7,15 +7,24 @@ import com.pluralsight.Animal;
 
 public class Cat extends Animal {
 
-    public Cat(String name){
+
+    public Cat(String name) {
         super(name);
         System.out.println("TRACE -- from cat constructor");
 
         super.setSpecies("Cat");
     }
 
-    public void meow(){
+    public void meow() {
         System.out.println("Meoww");
     }
 
+    public void sayHello() {
+        meow();
+    }
+
+    public void scratch() {
+        System.out.println("Scrrrrhhh");
+    }
 }
+

@@ -3,6 +3,8 @@ package com.pluralsight;
 import com.pluralsight.animal.Cat;
 import com.pluralsight.animal.Dog;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,12 +22,25 @@ public class Main {
         System.out.println(fish);
 
         System.out.println(dog);
-        dog.bark();
+       // dog.bark();
         System.out.println(cat);
-        cat.meow();
+       // cat.meow();
+
+        System.out.println("---------------------------------------------------------------");
 
 
+        ArrayList<Animal> myPets = new ArrayList<>();
+        myPets.add(fish);
+        myPets.add(dog);
+        myPets.add(cat);
 
+        sayHelloPets(myPets);
 
+    }
+
+    public static void sayHelloPets(ArrayList<Animal> pets){
+        for(int i = 0; i< pets.size(); i++){
+            pets.get(i).sayHello();
+        }
     }
 }
