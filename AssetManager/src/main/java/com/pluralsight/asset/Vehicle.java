@@ -68,17 +68,17 @@ public class Vehicle extends Asset {
         int vehicleAge = 2024 - year; // Calculate the vehicle's age (assuming current year is 2024)
         double reducedValue = 0;
 
-        // Determine depreciation based on vehicle age
-        if (vehicleAge >= 0 && vehicleAge <= 3) {
-            reducedValue = 0.03 * vehicleAge; // 3% reduction per year for 0-3 years
-        } else if (vehicleAge >= 4 && vehicleAge <= 6) {
-            reducedValue = 0.06 * vehicleAge; // 6% reduction per year for 4-6 years
-        } else if (vehicleAge >= 7 && vehicleAge <= 10) {
-            reducedValue = 0.08 * vehicleAge; // 8% reduction per year for 7-10 years
-        } else if (vehicleAge > 10) {
-            reducedValue = 1000; // $1,000 reduction for over 10 years
+        // Determine reduced value of cost per year based on vehicle age
+        if (vehicleAge >= 0 && vehicleAge <= 3) { //if 0-3 years
+            reducedValue = 0.03 * vehicleAge; // 3% reduced value
+        } else if (vehicleAge >= 4 && vehicleAge <= 6) { //if 4-6 years
+            reducedValue = 0.06 * vehicleAge; // 6% reduced value
+        } else if (vehicleAge >= 7 && vehicleAge <= 10) { // if 7-10 years
+            reducedValue = 0.08 * vehicleAge; // 8% reduced value
+        } else if (vehicleAge > 10) { //if 10+ years
+            reducedValue = 1000; // $1,000
         }
-
+        
         double currentValue = getOriginalCost() * (1 - reducedValue);
 
         // Unless makeModel contains words Honda or Toyota

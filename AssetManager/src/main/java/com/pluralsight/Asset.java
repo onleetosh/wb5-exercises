@@ -57,6 +57,11 @@ public class Asset {
         return getOriginalCost();
     }
 
+    /**
+     * The presence of the toString() method displays objects in a print statement
+     * Override toString() for a custom implementation
+     */
+
     @Override
     public String toString(){
         return "Description: " + description +
