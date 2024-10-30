@@ -3,19 +3,19 @@ package com.pluralsight;
 public class Vehicle {
 
 
-    private String color;
-    private int numberOfPassenger;
-    private int cargoCapacity;
-    private int fuelCapacity;
-    private int maxSpeed;
-    private int currentSpeed;
-    private String type;
-    private String terrain;
+    protected String color;
+    protected int numberOfPassenger;
+    protected int cargoCapacity;
+    protected int fuelCapacity;
+    protected int maxSpeed;
+    protected int currentSpeed;
+    protected String type;
+    protected String terrain;
 
     /**
      * Constructor for a vehicle object
      */
-    public Vehicle(String color,
+    protected Vehicle(String color,
                    int numberOfPassenger,
                    int cargoCapacity,
                    int fuelCapacity,
@@ -37,36 +37,36 @@ public class Vehicle {
     /**
      * Getters
      */
-    public String getColor() {
+    protected String getColor() {
         return color;
     }
 
-    public int getNumberOfPassenger() {
+    protected int getNumberOfPassenger() {
         return numberOfPassenger;
     }
 
-    public int getCargoCapacity() {
+    protected int getCargoCapacity() {
         return cargoCapacity;
     }
 
-    public int getFuelCapacity() {
+    protected int getFuelCapacity() {
         return fuelCapacity;
     }
 
-    public int getSpeedMax() {
+    protected int getSpeedMax() {
         return maxSpeed;
     }
 
 
-    public int getSpeedCurrent() {
+    protected int getSpeedCurrent() {
         return currentSpeed;
     }
 
-    public String getTerrain() {
+    protected String getTerrain() {
         return terrain;
     }
 
-    public String getType() {
+    protected String getType() {
         return type;
     }
 
@@ -74,48 +74,48 @@ public class Vehicle {
      * Setters
      */
 
-    public void setColor(String color) {
+    protected void setColor(String color) {
         this.color = color;
     }
 
-    public void setNumberOfPassenger(int numberOfPassenger) {
+    protected void setNumberOfPassenger(int numberOfPassenger) {
         this.numberOfPassenger = numberOfPassenger;
     }
 
-    public void setCargoCapacity(int cargoCapacity) {
+    protected void setCargoCapacity(int cargoCapacity) {
         this.cargoCapacity = cargoCapacity;
     }
 
-    public void setFuelCapacity(int fuelCapacity) {
+    protected void setFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
 
-    public void setSpeedMax(int speed) {
+    protected void setSpeedMax(int speed) {
         this.maxSpeed = speed;
     }
 
 
-    public void setSpeedCurrent(int speedCurrent) {
+    protected void setSpeedCurrent(int speedCurrent) {
         this.currentSpeed = speedCurrent;
     }
 
-    public void setTerrain(String terrain) {
+    protected void setTerrain(String terrain) {
         this.terrain = terrain;
     }
 
-    public void setType(String type) {
+    protected void setType(String type) {
         this.type = type;
     }
 
     @Override
     public String toString(){
-        return "Color: " + color +
-                "| # of passengers: " + numberOfPassenger +
-                "| cargo capacity size: " + cargoCapacity +
-                "| fuel capacity size: " +  fuelCapacity +
-                "| max speed: " + maxSpeed +
-                "| currentSpeed: " + currentSpeed +
-                "| vehicle type: " + type +
-                "| Type of terrain: " + terrain;
+        return "[ Color ] " + color +
+                ",[ # of passengers ] " + numberOfPassenger +
+                ",[ cargo capacity size ] " + cargoCapacity +
+                ",[ fuel capacity size ] " +  fuelCapacity +
+                ",[ max speed ] " + maxSpeed +
+                ",[ currentSpeed ] " + currentSpeed +
+                ",[ vehicle type ] " + type +
+                ",[ Type of terrain ] " + terrain;
     }
 }

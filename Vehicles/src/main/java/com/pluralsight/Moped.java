@@ -38,7 +38,7 @@ public class Moped extends Vehicle {
     @Override
     public String toString(){
 
-        return super.toString() + "| number of headlights: " + numberOfHeadLight;
+        return super.toString() + ",[ number of headlights ] " + numberOfHeadLight;
     }
 
 

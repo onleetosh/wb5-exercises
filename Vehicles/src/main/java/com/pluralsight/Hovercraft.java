@@ -38,7 +38,7 @@ public class Hovercraft extends Vehicle{
 
     @Override
     public String toString(){
-        return super.toString() + "| Altitude: " + altitude;
+        return super.toString() + ",[ Altitude ] " + altitude;
 
     }
 }

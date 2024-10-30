@@ -61,8 +61,8 @@ public class SemiTruck extends Vehicle {
     @Override
     public String toString(){
         return super.toString() +
-                "| # of wheels: " + wheels +
-                "| cargo hold: " + cargo +
-                "| attachment: " + hasAttachment;
+                ",[ # of wheels ] " + wheels +
+                ",[ cargo hold ] " + cargo +
+                ",[ attachment ] " + hasAttachment;
     }
 }
