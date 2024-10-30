@@ -15,8 +15,6 @@ public class House extends Asset {
     private int squareFoot;
     private int lotSize;
 
-
-
     /**
      * Constructor for house object
      */

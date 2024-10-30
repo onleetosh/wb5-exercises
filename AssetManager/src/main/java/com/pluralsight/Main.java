@@ -61,7 +61,7 @@ public class Main {
 
         /***
          * Loop through the ArrayList and display all objects with a custom String format.
-         *  Use instanceof to detect the type of object in the collection
+         *  Use instanceof to detect a specific type of object in the collection
          */
         for (int i = 0; i < assets.size(); i++){
             // using instanceof to detect House  objects
