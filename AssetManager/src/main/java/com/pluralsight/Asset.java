@@ -8,14 +8,14 @@ public class Asset {
     /***
      * Properties
      */
-    private String description;
-    private String dateAcquired;
-    private double originalCost;
+    protected String description;
+    protected String dateAcquired;
+    protected double originalCost;
 
     /**
      * Constructor for asset object
      */
-    public Asset(String description,
+    protected Asset(String description,
                  String dateAcquired,
                  double originalCost) {
         this.description = description;
@@ -26,34 +26,34 @@ public class Asset {
     /***
      * Getters
      */
-    public String getDescription() {
+    protected String getDescription() {
         return description;
     }
 
-    public String getDateAcquired() {
+    protected String getDateAcquired() {
         return dateAcquired;
     }
 
-    public double getOriginalCost() {
+    protected double getOriginalCost() {
         return originalCost;
     }
     /***
      * Setters
      */
-    public void setDescription(String description) {
+    protected void setDescription(String description) {
         this.description = description;
     }
 
-    public void setDateAcquired(String dateAcquired) {
+    protected void setDateAcquired(String dateAcquired) {
         this.dateAcquired = dateAcquired;
     }
 
-    public void setOriginalCost(double originalCost) {
+    protected void setOriginalCost(double originalCost) {
         this.originalCost = originalCost;
     }
 
 
-    public double getValue(){
+    protected double getValue(){
         return getOriginalCost();
     }
 

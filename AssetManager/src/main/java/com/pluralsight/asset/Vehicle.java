@@ -78,7 +78,7 @@ public class Vehicle extends Asset {
         } else if (vehicleAge > 10) { //if 10+ years
             reducedValue = 1000; // $1,000
         }
-        
+
         double currentValue = getOriginalCost() * (1 - reducedValue);
 
         // Unless makeModel contains words Honda or Toyota
@@ -88,7 +88,6 @@ public class Vehicle extends Asset {
 
         // Ensure value does not go below zero
         return Math.max(currentValue, 0);
-
     }
 
     @Override

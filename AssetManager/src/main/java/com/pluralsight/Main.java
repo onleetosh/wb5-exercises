@@ -14,7 +14,6 @@ public class Main {
          */
         ArrayList<Asset> assets = new ArrayList<>();
 
-
         /**
          * Create two House objects and add them to the ArrayList
          */
