@@ -67,7 +67,7 @@ public class Main {
            if(assets.get(i) instanceof House) {
                House house = (House) assets.get(i); //get the objects from ArrayList
                customString = "[Address] " + house.getAddress() +
-                       " | [Original Cost] " + house.getAddress() +
+                       " | [Original Cost] " + house.getOriginalCost() +
                        " | [Current Value] " + house.getValue();
            }
            // using instanceof to detect Vehicle  objects
