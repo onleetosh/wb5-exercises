@@ -65,6 +65,6 @@ public class Asset {
     public String toString(){
         return "Description: " + description +
                 ", Date acquired: " + dateAcquired +
-                ", Original Cost: " + originalCost;
+                ", Original Cost: $" + originalCost;
     }
 }

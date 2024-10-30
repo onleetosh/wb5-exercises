@@ -67,15 +67,15 @@ public class Main {
            if(assets.get(i) instanceof House) {
                House house = (House) assets.get(i); //get the objects from ArrayList
                customString = "[Address] " + house.getAddress() +
-                       " | [Original Cost] " + house.getOriginalCost() +
-                       " | [Current Value] " + house.getValue();
+                       " | [Original Cost] $" + house.getOriginalCost() +
+                       " | [Current Value] $" + house.getValue();
            }
            // using instanceof to detect Vehicle  objects
            else if(assets.get(i) instanceof Vehicle){
                Vehicle vehicle = (Vehicle) assets.get(i); //get the objects from ArrayList
                customString = String.format("[Year] " + vehicle.getYear() +
                        " | [Make/Model] " + vehicle.getMakeModel() +
-                       " | [Value] " + vehicle.getValue());
+                       " | [Value] $" + vehicle.getValue());
            }
            //display Assets with a custom string format
            System.out.println(customString);
