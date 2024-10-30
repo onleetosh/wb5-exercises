@@ -86,8 +86,8 @@ public class Vehicle extends Asset {
             currentValue *= 0.75; // Reduce value by 25% if over 100,000 miles
         }
 
-        // Ensure value does not go below zero
-        return Math.max(currentValue, 0);
+        // Ensure value does not go below zero and returns the
+        return currentValue;
     }
 
     @Override
