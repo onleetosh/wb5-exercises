@@ -22,14 +22,14 @@ public class Main {
                 "10-20-2024",
                 6155,
                 "309 Avenue C, Apt 10-E, Manhattan, NY",
-                4,
+                1,
                 948,
-                0);
+                100);
         House house2 = new House("Riverdale Area",
                 "10-21-2023",
                 6200,
                 "385 W 263rd St, Bronx, NY",
-                4,
+                1,
                 2100,
                 200);
 
@@ -58,7 +58,6 @@ public class Main {
 
         String customString = " ";
 
-
         /***
          * Loop through the ArrayList and display all objects with a custom String format.
          *  Use instanceof to detect a specific type of object in the collection
@@ -68,13 +67,15 @@ public class Main {
            if(assets.get(i) instanceof House) {
                House house = (House) assets.get(i); //get the objects from ArrayList
                customString = "[Address] " + house.getAddress() +
-                       " | [Value] " + house.getValue();
+                       " | [Original Cost] " + house.getAddress() +
+                       " | [Current Value] " + house.getValue();
            }
            // using instanceof to detect Vehicle  objects
            else if(assets.get(i) instanceof Vehicle){
                Vehicle vehicle = (Vehicle) assets.get(i); //get the objects from ArrayList
-               customString = "[Year] " + vehicle.getYear() +
-                       " | [Make/Model] " + vehicle.getMakeModel();
+               customString = String.format("[Year] " + vehicle.getYear() +
+                       " | [Make/Model] " + vehicle.getMakeModel() +
+                       " | [Value] " + vehicle.getValue());
            }
            //display Assets with a custom string format
            System.out.println(customString);
