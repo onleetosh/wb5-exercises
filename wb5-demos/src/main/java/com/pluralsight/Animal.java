@@ -6,13 +6,13 @@ package com.pluralsight;
 
 public class Animal {
 
-    private String name;
-    private float weight;
-    private int age;
-    private String coat;
-    private String species;
+    protected String name;
+    protected float weight;
+    protected int age;
+    protected String coat;
+    protected String species;
 
-    public Animal(String name){
+    protected Animal(String name){
         //trace entry - turn off after testing how it runs
         System.out.println("TRACE -- from animal constructor");
         this.name = name;
@@ -23,21 +23,21 @@ public class Animal {
      * Getters
      */
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
-    public float getWeight() {
+    protected float getWeight() {
         return weight;
     }
-    public int getAge() {
+    protected int getAge() {
         return age;
     }
 
-    public String getCoat() {
+    protected String getCoat() {
         return coat;
     }
 
-    public String getSpecies() {
+    protected String getSpecies() {
         return species;
     }
 
@@ -45,26 +45,26 @@ public class Animal {
      * Setters
      */
 
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
-    public void setCoat(String coat) {
+    protected void setCoat(String coat) {
         this.coat = coat;
     }
 
-    public void setAge(int age) {
+    protected void setAge(int age) {
         this.age = age;
     }
 
-    public void setSpecies(String species){
+    protected void setSpecies(String species){
         this.species = species;
     }
 
     /***
      * This method tracks the amount of weight gained when a dog eats
      */
-    public void eat(float amountOfFood) {
+    protected void eat(float amountOfFood) {
         this.weight = amountOfFood;
     }
 
@@ -72,12 +72,12 @@ public class Animal {
     /***
      * This method tracks the amount of weight losses when a dog diets
      */
-    public void diet(float amountOfFood) {
+    protected void diet(float amountOfFood) {
 
         this.weight = amountOfFood;
     }
 
-    public void sayHello(){
+    protected void sayHello(){
         System.out.println("[silence]");
     }
 

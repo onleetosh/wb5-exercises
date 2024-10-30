@@ -14,7 +14,6 @@ public class Dog extends Animal {
     public Dog(String name) {
         super(name);
         System.out.println("TRACE -- from dog constructor");
-
         super.setSpecies("Dog");
     }
     public String getBreed() {

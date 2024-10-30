@@ -17,8 +17,6 @@ public class Main {
 
         Cat cat = new Cat("Starboy");
 
-
-
         System.out.println(fish);
 
         System.out.println(dog);

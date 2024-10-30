@@ -70,13 +70,13 @@ public class Vehicle extends Asset {
 
         // Determine reduced value of cost per year based on vehicle age
         if (vehicleAge >= 0 && vehicleAge <= 3) { //if 0-3 years
-            reducedValue = 0.03 * vehicleAge; // 3% reduced value
+            reducedValue = 0.03 * vehicleAge;
         } else if (vehicleAge >= 4 && vehicleAge <= 6) { //if 4-6 years
-            reducedValue = 0.06 * vehicleAge; // 6% reduced value
+            reducedValue = 0.06 * vehicleAge;
         } else if (vehicleAge >= 7 && vehicleAge <= 10) { // if 7-10 years
-            reducedValue = 0.08 * vehicleAge; // 8% reduced value
+            reducedValue = 0.08 * vehicleAge;
         } else if (vehicleAge > 10) { //if 10+ years
-            reducedValue = 1000; // $1,000
+            reducedValue = 1000;
         }
 
         double currentValue = getOriginalCost() * (1 - reducedValue);
@@ -86,7 +86,6 @@ public class Vehicle extends Asset {
             currentValue *= 0.75; // Reduce value by 25% if over 100,000 miles
         }
 
-        // Ensure value does not go below zero and returns the
         return currentValue;
     }
 
