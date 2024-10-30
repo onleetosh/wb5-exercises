@@ -80,14 +80,14 @@ public class House extends Asset {
         double pricePerSquareFoot = 0; //default to a value of $0
 
         switch (condition) {
-            //$180.00 per square foot (excellent)
-            case 1 -> pricePerSquareFoot = 180.00;
-            //$130.00 per square foot (good)
-            case 2 -> pricePerSquareFoot = 130.00;
-            //$90.00 per square foot (fair)
-            case 3 -> pricePerSquareFoot = 90.00;
             //$80.00 per square foot (poor)
-            case 4 -> pricePerSquareFoot = 80.00;
+            case 1 -> pricePerSquareFoot = 80.00;
+            //$90.00 per square foot (fair)
+            case 2 -> pricePerSquareFoot = 90.00;
+            //$130.00 per square foot (good)
+            case 3 -> pricePerSquareFoot = 130.00;
+            //$180.00 per square foot (excellent)
+            case 4 -> pricePerSquareFoot = 180.00;
             default -> throw new IllegalStateException("Unexpected value: " + condition);
         }
 
