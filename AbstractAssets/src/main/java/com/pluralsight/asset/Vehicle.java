@@ -1,6 +1,3 @@
-/**
- *  Derived Class
- */
 package com.pluralsight.asset;
 
 import com.pluralsight.Asset;
@@ -78,7 +75,7 @@ public class Vehicle extends Asset {
             return 1000;
         }
 
-        double currentValue = getOriginalCost() * (1 - reducedValue);
+        double currentValue = getOriginalPrice() * (1 - reducedValue);
 
         if (odometer > 100000 && !makeModel.toLowerCase().contains("honda") &&
                 !makeModel.toLowerCase().contains("toyota")) {

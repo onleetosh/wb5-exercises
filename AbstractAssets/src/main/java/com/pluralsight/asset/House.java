@@ -1,6 +1,3 @@
-/**
- *  Derived Class
- */
 package com.pluralsight.asset;
 
 import com.pluralsight.Asset;
@@ -72,7 +69,6 @@ public class House extends Asset {
     /***
      *  determine the value of a house
      */
-    @Override
     public double getValue() {
 
         double pricePerSquareFoot = 0;
@@ -96,6 +92,7 @@ public class House extends Asset {
         return houseValue + lotValue;
     }
 
+    @Override
     public String toString(){
         return super.toString() + ", Address: " + address +
                 ", Condition: " + condition +

@@ -66,24 +66,22 @@ public class Main {
 
         for (int i = 0; i < assets.size(); i++){
             // using instanceof to detect House  objects
-           if(assets.get(i) instanceof House) {
-               House house = (House) assets.get(i); //get the objects from ArrayList
-               customString = "[Address] " + house.getAddress() +
-                       " | [Original Cost] $" + house.getOriginalCost() +
-                       " | [Current Value] $" + house.getValue();
-           }
-           // using instanceof to detect Vehicle  objects
-           else if(assets.get(i) instanceof Vehicle){
-               Vehicle vehicle = (Vehicle) assets.get(i); //get the objects from ArrayList
-               customString = String.format("[Year] " + vehicle.getYear() +
-                       " | [Make/Model] " + vehicle.getMakeModel() +
-                       " | [Value] $" + vehicle.getValue());
-           }
-
+            if(assets.get(i) instanceof House) {
+                House house = (House) assets.get(i); //get the objects from ArrayList
+                customString = "[Address] " + house.getAddress() +
+                        " | [Original Cost] $" + house.getOriginalPrice() +
+                        " | [Current Value] $" + house.getValue();
+            }
+            // using instanceof to detect Vehicle  objects
+            else if(assets.get(i) instanceof Vehicle){
+                Vehicle vehicle = (Vehicle) assets.get(i); //get the objects from ArrayList
+                customString = String.format("[Year] " + vehicle.getYear() +
+                        " | [Make/Model] " + vehicle.getMakeModel() +
+                        " | [Value] $" + vehicle.getValue());
+            }
             //display Assets with a custom string format
-           System.out.println(customString);
+            System.out.println(customString);
             networkWorth += ((Asset) assets.get(i)).getValue();
-
         }
 
         System.out.println(networkWorth);

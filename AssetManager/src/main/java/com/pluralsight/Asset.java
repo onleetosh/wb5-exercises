@@ -1,7 +1,8 @@
 /**
- *  Base Class - Hierarchy at the top
+ *  Base Class - Hierarchy at the top; Abstract marks the constructor Unusable and can
  */
 package com.pluralsight;
+
 
 public class Asset {
 
@@ -15,7 +16,7 @@ public class Asset {
     /**
      * Constructor for asset object
      */
-    protected Asset(String description,
+    public Asset(String description,
                  String dateAcquired,
                  double originalCost) {
         this.description = description;
@@ -26,34 +27,34 @@ public class Asset {
     /***
      * Getters
      */
-    protected String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    protected String getDateAcquired() {
+    public String getDateAcquired() {
         return dateAcquired;
     }
 
-    protected double getOriginalCost() {
+    public double getOriginalCost() {
         return originalCost;
     }
     /***
      * Setters
      */
-    protected void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    protected void setDateAcquired(String dateAcquired) {
+    public void setDateAcquired(String dateAcquired) {
         this.dateAcquired = dateAcquired;
     }
 
-    protected void setOriginalCost(double originalCost) {
+    public void setOriginalCost(double originalCost) {
         this.originalCost = originalCost;
     }
 
 
-    protected double getValue(){
+    public double getValue(){
         return getOriginalCost();
     }
 
